@@ -2,7 +2,7 @@ import time
 import os
 import torch
 import torch.distributed
-from transformers import T5EncoderModel
+from transformers.models.t5.modeling_t5 import T5EncoderModel
 from xfuser import xFuserStableDiffusion3Pipeline, xFuserArgs
 from xfuser.config import FlexibleArgumentParser
 from xfuser.core.distributed import (
