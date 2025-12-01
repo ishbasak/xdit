@@ -13,6 +13,8 @@ from xfuser.core.distributed import (
 )
 from xfuser.core.distributed.parallel_state import get_data_parallel_world_size
 
+import pdb
+
 
 def main():
     parser = FlexibleArgumentParser(description="xFuser Arguments")
@@ -40,6 +42,7 @@ def main():
 
     torch.cuda.reset_peak_memory_stats()
     start_time = time.time()
+    pdb.set_trace()
     output = pipe(
         height=input_config.height,
         width=input_config.width,
